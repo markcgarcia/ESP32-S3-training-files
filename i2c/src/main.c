@@ -32,7 +32,7 @@ typedef struct {
 static esp_err_t imu_read_burst(i2c_master_dev_handle_t dev_handle, uint8_t reg_addr, size_t len, DataSample *sample) {
     // Burst read: store in read buffer "arr"
     uint8_t arr[14];
-    esp_err_t err =  i2c_master_transmit_receive(dev_handle, &reg_addr, 1, arr, 14, -1);
+    esp_err_t err =  i2c_master_transmit_receive(dev_handle, &reg_addr, 1, arr, len, -1);
 
     // Move contents from "arr" to struct parameter "sample"
     sample->ax = (arr[0] << 8) + arr[1];

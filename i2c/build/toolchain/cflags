@@ -1,0 +1,6 @@
+-Wno-frame-address
+-mlongcalls
+-fno-builtin-memcpy
+-fno-builtin-memset
+-fno-builtin-bzero
+"-specs=C:/Users/garci/Documents/Projects/26Su_Project/ESP32-S3-training-files/i2c/build/specs/picolibc.specs"
